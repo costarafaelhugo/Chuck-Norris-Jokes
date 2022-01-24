@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_dimension">76dp</dimen>
+    <dimen name="margin_start_logo_image">167dp</dimen>
+    <dimen name="margin_top_logo_image">56dp</dimen>
+    <dimen name="margin_end_logo_image">168dp</dimen>
+    <dimen name="text_view_width">290dp</dimen>
+    <dimen name="text_view_height">343dp</dimen>
+    <dimen name="text_view_margin_start">60dp</dimen>
+    <dimen name="text_view_margin_top">180dp</dimen>
+    <dimen name="text_view_margin_end">61dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="text_view_margin_botton">208dp</dimen>
+    <dimen name="image_button_width">154dp</dimen>
+    <dimen name="image_button_height">72dp</dimen>
+    <dimen name="image_button_margin_start">128dp</dimen>
+    <dimen name="image_button_margin_top">565dp</dimen>
+    <dimen name="image_button_margin_end">129dp</dimen>
+    <dimen name="image_button_margin_bottom">94dp</dimen>
+    <dimen name="btn_text_view_width">126dp</dimen>
+    <dimen name="btn_text_view_height">19dp</dimen>
+    <dimen name="btn_line_height">15sp</dimen>
+    <dimen name="btn_text_size">15sp</dimen>
+</resources>

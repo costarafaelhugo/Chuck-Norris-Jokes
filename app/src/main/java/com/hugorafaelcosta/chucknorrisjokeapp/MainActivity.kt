@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         binding.giveMeAJokeBtn.setOnClickListener {
             loadRandomJoke()
         }
+        actionBar?.hide()
+        supportActionBar?.hide();
     }
 
     private fun loadRandomJoke() {
