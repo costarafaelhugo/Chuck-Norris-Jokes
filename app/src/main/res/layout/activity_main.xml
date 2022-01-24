@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/jokeImageView"
         android:layout_width="76dp"
         android:layout_height="76dp"
         android:layout_marginStart="167dp"
@@ -23,6 +24,7 @@
 
     <TextView
         style="regular"
+        android:id="@+id/jokeTextView"
         android:layout_width="290dp"
         android:layout_height="343dp"
         android:layout_marginStart="60dp"
@@ -32,7 +34,7 @@
         android:textStyle="normal"
         android:textColor="#231F20"
         app:flow_verticalAlign="top"
-        android:text="You may be wondering, 'why can't Chuck Norris use his incredible powers to end poverty, starvation and disease and bring about world peace?' Shut the fuck up, that's why."
+        android:text=""
         android:layout_marginBottom="208dp"
         android:fontFamily="@font/pixelmix"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/giveMeAJokeBtn"
         android:layout_width="154dp"
         android:layout_height="72dp"
         android:layout_marginStart="128dp"
@@ -64,10 +66,21 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintBottom_toBottomOf="@+id/giveMeAJokeBtn"
+        app:layout_constraintEnd_toEndOf="@+id/giveMeAJokeBtn"
+        app:layout_constraintStart_toStartOf="@+id/giveMeAJokeBtn"
+        app:layout_constraintTop_toTopOf="@+id/giveMeAJokeBtn" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        android:visibility="gone"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
