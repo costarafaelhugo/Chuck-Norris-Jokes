@@ -1,11 +1,11 @@
 package com.hugorafaelcosta.chucknorrisjokeapp
 
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Website.URL
 import android.text.Html
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.hugorafaelcosta.chucknorrisjokeapp.databinding.ActivityMainBinding
+import com.hugorafaelcosta.chucknorrisjokeapp.databinding.FragmentJokesBinding
+import com.hugorafaelcosta.chucknorrisjokeapp.databinding.FragmentSplashBinding
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -15,14 +15,15 @@ import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: FragmentJokesBinding
+    private lateinit var splashBinding: FragmentSplashBinding
 
     val URL = "https://api.icndb.com/jokes/random"
     var okHttpClient: OkHttpClient = OkHttpClient()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = FragmentJokesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.giveMeAJokeBtn.setOnClickListener {
             loadRandomJoke()

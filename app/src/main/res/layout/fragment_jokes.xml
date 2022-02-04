@@ -9,7 +9,6 @@
     android:background="@drawable/bg_actvity"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-
     <ImageView
         android:id="@+id/jokeImageView"
         android:layout_width="@dimen/image_dimension"
@@ -81,6 +80,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
         android:visibility="gone"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
