@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout-v28/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_chuck_norris_jokes.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.20729166666666668" />
+        <entry key="app/src/main/res/layout/fragment_chuck_norris_jokes.xml" value="0.15" />
         <entry key="app/src/main/res/layout/fragment_jokes.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.23696682464454977" />
       </map>

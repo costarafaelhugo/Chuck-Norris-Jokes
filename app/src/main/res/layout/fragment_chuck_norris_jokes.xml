@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/bg_actvity"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-    android:id="@+id/fragment_jokes">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".JokesFragment"
+    android:background="@drawable/bg_actvity">
 
     <ImageView
-        android:id="@+id/jokeImageView"
+        android:id="@+id/chuck_pixel_logo"
         android:layout_width="@dimen/image_dimension"
         android:layout_height="@dimen/image_dimension"
         android:layout_marginStart="@dimen/margin_start_logo_image"
@@ -23,8 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="regular"
-        android:id="@+id/jokeTextView"
+        android:id="@+id/chuck_norri"
         android:layout_width="@dimen/text_view_width"
         android:layout_height="@dimen/text_view_height"
         android:layout_marginStart="@dimen/text_view_margin_start"
@@ -40,7 +36,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <ImageButton
         android:id="@+id/giveMeAJokeBtn"
@@ -57,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/jokes_text_view"
+        android:id="@+id/new_joke"
         android:layout_width="@dimen/btn_text_view_width"
         android:layout_height="@dimen/btn_text_view_height"
         android:fontFamily="@font/pixelmix_bold"
@@ -71,16 +67,4 @@
         app:layout_constraintEnd_toEndOf="@+id/giveMeAJokeBtn"
         app:layout_constraintStart_toStartOf="@+id/giveMeAJokeBtn"
         app:layout_constraintTop_toTopOf="@+id/giveMeAJokeBtn" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        android:visibility="gone"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

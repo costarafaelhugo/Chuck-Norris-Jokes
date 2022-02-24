@@ -1,57 +1,43 @@
 package com.hugorafaelcosta.chucknorrisjokeapp
 
 import android.os.Bundle
-import android.text.Html
-import android.view.View
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.hugorafaelcosta.chucknorrisjokeapp.databinding.FragmentJokesBinding
-import com.hugorafaelcosta.chucknorrisjokeapp.databinding.FragmentSplashBinding
-import okhttp3.Call
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import org.json.JSONObject
-import java.io.IOException
+import com.hugorafaelcosta.chucknorrisjokeapp.databinding.ActivityChuckNorrisJokesBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: FragmentJokesBinding
-    private lateinit var splashBinding: FragmentSplashBinding
-
-    val URL = "https://api.icndb.com/jokes/random"
-    var okHttpClient: OkHttpClient = OkHttpClient()
+    private lateinit var binding: ActivityChuckNorrisJokesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentJokesBinding.inflate(layoutInflater)
+        binding = ActivityChuckNorrisJokesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.giveMeAJokeBtn.setOnClickListener {
-            loadRandomJoke()
-        }
-        actionBar?.hide()
-        supportActionBar?.hide();
+
+        startSplashFragment()
+
+
     }
 
-    private fun loadRandomJoke() {
-        runOnUiThread{
-            binding.progressBar.visibility = View.VISIBLE
-        }
-        val request: Request = Request.Builder().url(URL).build()
-        okHttpClient.newCall(request).enqueue(object : okhttp3.Callback {
-            override fun onFailure(call: Call, e: IOException) {
-            }
+    private fun startSplashFragment() {
+        val splashFragment = Splashscreen()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragmentContainerView, splashFragment)
+            .commit()
 
-            override fun onResponse(call: Call, response: Response) {
-                val json = response.body?.string()
-                val txt = (JSONObject(json).getJSONObject("value")).get("joke").toString()
+        Handler(Looper.getMainLooper()).postDelayed({
+            startChuckNorrisJokesFragment()
+        }, 3000)
+    }
 
-                runOnUiThread {
-                    binding.progressBar.visibility = View.GONE
-                    binding.jokeTextView.text = Html.fromHtml(txt)
-                }
-
-            }
-        })
+    private fun startChuckNorrisJokesFragment() {
+        val norrisjokeFragment = JokesFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragmentContainerView, norrisjokeFragment)
+            .commit()
     }
 
 }
